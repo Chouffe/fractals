@@ -1,0 +1,10 @@
+(set [1 2 3])
+(doc re-find)
+(require '[mandelbrot.utils :as u])
+defn str->color [string]
+  (re-find #"rgb\((\d+),(\d+),(\d+)\)" string)
+(re-find #"rgb\((\d+),(\d+),(\d+)\)" "rgb(1,2,3)")
+(re-find #"rgb\((\d+),\s+(\d+),\s+(\d+).*\)" "rgb(1,2,3)")
+(re-find #"rgb\((\d+),\s*(\d+),\s*(\d+).*\)" "rgb(1,2,3)")
+(Integer. "42")
+(require '[mandelbrot.utils :as u])
